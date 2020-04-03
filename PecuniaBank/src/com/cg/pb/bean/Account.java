@@ -3,6 +3,7 @@ package com.cg.pb.bean;
 public class Account {
 	private String accountId;
 	private Customer customer;
+	private Address address;
 	private Double accNo;
 	private int balance;
 	private int amount;
@@ -12,7 +13,7 @@ public class Account {
 	private String checkIssueDate;
 	
 	public String getAccountId() {
-		return accountId;
+		return accountId; 
 	}
 	public void setAccountId(String accountId) {
 		this.accountId = accountId;
@@ -65,11 +66,17 @@ public class Account {
 	public void setCheckIssueDate(String checkIssueDate) {
 		this.checkIssueDate = checkIssueDate;
 	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	@Override
 	public String toString() {
-		return "Account [accountId=" + accountId + ", customer=" + customer + ", accNo=" + accNo + ", balance="
-				+ balance + ", amount=" + amount + ", chequeNum=" + chequeNum + ", ifsc=" + ifsc + ", bankname="
-				+ bankname + ", checkIssueDate=" + checkIssueDate + "]";
+		return "Account [accountId=" + accountId + ", \ncustomer=" + customer + ",\naddress=" + address + ",\naccNo="
+				+ accNo + ", balance=" + balance + ", amount=" + amount + ", chequeNum=" + chequeNum + ", ifsc=" + ifsc
+				+ ", bankname=" + bankname + ", checkIssueDate=" + checkIssueDate + "]";
 	}
 	
 	
