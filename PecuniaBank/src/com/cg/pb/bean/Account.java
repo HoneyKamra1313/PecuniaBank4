@@ -1,22 +1,37 @@
 package com.cg.pb.bean;
 
 public class Account {
-	private String accountId;
+	private String accId;
+	private int branchId;
+	private String type;
+	private double balance;
 	private Customer customer;
 	private Address address;
 	private Double accNo;
-	private int balance;
-	private int amount;
-    private int chequeNum;
-	private int ifsc;
-	private String bankname;
-	private String checkIssueDate;
 	
-	public String getAccountId() {
-		return accountId; 
+	public String getAccId() {
+		return accId;
 	}
-	public void setAccountId(String accountId) {
-		this.accountId = accountId;
+	public void setAccId(String accId) {
+		this.accId = accId;
+	}
+	public int getBranchId() {
+		return branchId;
+	}
+	public void setBranchId(int branchId) {
+		this.branchId = branchId;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	public Customer getCustomer() {
 		return customer;
@@ -24,60 +39,24 @@ public class Account {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	public Double getAccNo() {
-		return accNo;
-	}
-	public void setAccNo(Double accNo) {
-		this.accNo = accNo;
-	}
-	public int getBalance() {
-		return balance;
-	}
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	public int getChequeNum() {
-		return chequeNum;
-	}
-	public void setChequeNum(int chequeNum) {
-		this.chequeNum = chequeNum;
-	}
-	public int getIfsc() {
-		return ifsc;
-	}
-	public void setIfsc(int ifsc) {
-		this.ifsc = ifsc;
-	}
-	public String getBankname() {
-		return bankname;
-	}
-	public void setBankname(String bankname) {
-		this.bankname = bankname;
-	}
-	public String getCheckIssueDate() {
-		return checkIssueDate;
-	}
-	public void setCheckIssueDate(String checkIssueDate) {
-		this.checkIssueDate = checkIssueDate;
-	}
 	public Address getAddress() {
 		return address;
 	}
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+	public Double getAccNo() {
+		return accNo;
+	}
+	public void setAccNo(Double accNo) {
+		this.accNo = accNo;
+	}
 	@Override
 	public String toString() {
-		return "Account [accountId=" + accountId + ", \ncustomer=" + customer + ",\naddress=" + address + ",\naccNo="
-				+ accNo + ", balance=" + balance + ", amount=" + amount + ", chequeNum=" + chequeNum + ", ifsc=" + ifsc
-				+ ", bankname=" + bankname + ", checkIssueDate=" + checkIssueDate + "]";
+		return "Account [accId=" + accId + ", branchId=" + branchId + ", type=" + type + ", balance=" + balance
+				+ ", \ncustomer=" + customer + ", \naddress=" + address + ", \naccNo=" + accNo + "]";
 	}
-	
+
 	
 }
+	

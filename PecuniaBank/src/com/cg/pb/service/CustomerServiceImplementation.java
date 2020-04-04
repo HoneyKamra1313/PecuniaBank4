@@ -26,14 +26,14 @@ public class CustomerServiceImplementation implements CustomerService{
 	}
 	@Override
 	public boolean updateCustomerContact(Account account,Customer customer) {
-		account.setAccountId(account.getAccountId());
+		account.setAccNo(account.getAccNo());
 		customer.setContact(customer.getContact());
 		return true;
 
 	}
 	@Override
 	public boolean updateCustomerAddress(Account account,Address address) {
-		account.setAccountId(account.getAccountId());
+		account.setAccNo(account.getAccNo());
 		return true;
 
 	}

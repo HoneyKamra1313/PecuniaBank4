@@ -8,14 +8,14 @@ public class TransactionServiceImplementation implements TransactionService{
 
 	
 	@Override
-	public void creditUsingSlip(int amount) {
+	public void creditUsingSlip(double d) {
 		// TODO Auto-generated method stub
 		
-		if(amount<0) {
+		if(d<0) {
 			System.out.println("invalid");
 		}
 		else {
-			this.balance=this.balance+amount;
+			this.balance=this.balance+d;
 			System.out.println("Credited Successfully");
 		}
 			
@@ -24,11 +24,11 @@ public class TransactionServiceImplementation implements TransactionService{
 
 
 	@Override
-	public void debitUsingSlip(int amount) {
+	public void debitUsingSlip(double d) {
 		
 		// TODO Auto-generated method stub
-		if(amount<=account.getBalance()) {
-			this.balance=this.balance-amount;
+		if(d<=account.getBalance()) {
+			this.balance=this.balance-d;
 			System.out.println("Debited Successfully");
 		}
 		else

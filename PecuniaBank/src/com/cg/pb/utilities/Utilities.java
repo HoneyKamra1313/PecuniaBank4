@@ -7,33 +7,39 @@ public class Utilities {
 			return true;
 		return false;
 	}
-	public static boolean accIdValidate(String customerID) {
+	public static boolean accIdValidate(String accId) {
 		String pattern = "[0-9]{12}";
-		if(customerID.matches(pattern))
+		if(accId.matches(pattern))
 			return true;
 		return false;
 	}
-	public static boolean accNoValidate(String customerID) {
+	public static boolean accNoValidate(String accNo) {
 		String pattern = "[0-9]{12}";
-		if(customerID.matches(pattern))
+		if(accNo.matches(pattern))
 			return true;
 		return false;
 	}
-	public static boolean contactValidate(String Amount) {
+	public static boolean contactValidate(String contact) {
 		String pattern = "[0-9]{10}";
-		if(Amount.matches(pattern))
+		if(contact.matches(pattern))
 			return true;
 		return false;
 	}
-	public static boolean aadharValidate(String Amount) {
+	public static boolean aadharValidate(String aadhar) {
 		String pattern = "[0-9]{12}";
-		if(Amount.matches(pattern))
+		if(aadhar.matches(pattern))
 			return true;
 		return false;
 	}
-	public static boolean panValidate(String Amount) {
-		String pattern = "[a-z]{5}[0-9]{6-9}[a-zA-Z]{10}";
-		if(Amount.matches(pattern))
+	public static boolean dateValidate(String date) {
+		String pattern = "[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}";
+		if(date.matches(pattern))
+			return true;
+		return false;
+	}
+	public static boolean panValidate(String pan) {
+		String pattern = "[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}";
+		if(pan.matches(pattern))
 			return true;
 		return false;
 	}

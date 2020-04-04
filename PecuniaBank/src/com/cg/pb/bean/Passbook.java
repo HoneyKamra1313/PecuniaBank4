@@ -1,25 +1,25 @@
 package com.cg.pb.bean;
 
 public class Passbook {
-	double accountId;
-	long startDate;
-	long endDate;
-	public double getAccountId() {
-		return accountId;
+	double accNo;
+	int startDate;
+	int endDate;
+	public double getAccNo() {
+		return accNo;
 	}
-	public void setAccountId(double accountId) {
-		this.accountId = accountId;
+	public void setAccNo(double accNo) {
+		this.accNo = accNo;
 	}
 	public long getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(long startDate) {
+	public void setStartDate(int startDate) {
 		this.startDate = startDate;
 	}
 	public long getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(long endDate) {
+	public void setEndDate(int endDate) {
 		this.endDate = endDate;
 	}
 	
