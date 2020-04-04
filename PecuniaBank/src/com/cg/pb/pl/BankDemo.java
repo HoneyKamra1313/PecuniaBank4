@@ -36,61 +36,61 @@ public class BankDemo {
 				int opt1 = scr.nextInt();
 				switch (opt1) {
 				case 1:
-//						while(true) {
-//							System.out.println("Enter Customer Name");
-//							String name=scr.next();
-//							boolean flag = Utilities.nameValidate(name);
-//							if(!flag)
-//								System.out.println("Only 3-10 digit alphabet allowed");
-//							else
-//								break;
-//							customer.setName(name);
-//						}
-//						while(true) {
-//							System.out.println("Enter Customer Aadhar");
-//							String aadhar=scr.next();
-//							boolean flag = Utilities.aadharValidate(aadhar);
-//							if(!flag)
-//								System.out.println("Only 12 digit number allowed");
-//							else
-//								break;
-//							customer.setAadhar(Double.parseDouble(aadhar));
-//							
-//						}
-//						while(true) {
-//							System.out.println("Enter Customer DOB(DD/MM/YYYY)");
-//							String dob=scr.next();
-//							boolean flag = Utilities.dateValidate(dob);
-//							if(!flag)
-//								System.out.println("Only valid date allowed");
-//							else
-//								break;
-//							customer.setDOB(dob);
-//						}
-//						while(true) {
-//							System.out.println("Enter Customer PAN(for eg: abcde1234e)");
-//							String pan=scr.next();
-//							boolean flag = Utilities.panValidate(pan);
-//							if(!flag)
-//								System.out.println("Wrong Pan Detail");
-//							else
-//								break;
-//							customer.setPAN(pan);
-//							
-//						}
-//						
-//						System.out.println("Enter Customer Gender");
-//						String gender=scr.next();
-//						System.out.println("Enter Customer Address line 1");
-//						String addressline1=scr.next();
-//						System.out.println("Enter Customer Address line 2");
-//						String addressline2=scr.next();
-//						System.out.println("Enter City");
-//						String city=scr.next();
-//						System.out.println("Enter State");
-//						String state=scr.next();
-//						System.out.println("Enter ZipCode");
-//						String zipcode=scr.next();
+						while(true) {
+							System.out.println("Enter Customer Name");
+							String name=scr.next();
+							boolean flag = Utilities.nameValidate(name);
+							if(!flag)
+								System.out.println("Only 3-10 digit alphabet allowed");
+							else
+								break;
+							customer.setName(name);
+						}
+						while(true) {
+							System.out.println("Enter Customer Aadhar");
+							String aadhar=scr.next();
+							boolean flag = Utilities.aadharValidate(aadhar);
+							if(!flag)
+								System.out.println("Only 12 digit number allowed");
+							else
+								break;
+							customer.setAadhar(Double.parseDouble(aadhar));
+							
+						}
+						while(true) {
+							System.out.println("Enter Customer DOB(DD/MM/YYYY)");
+							String dob=scr.next();
+							boolean flag = Utilities.dateValidate(dob);
+							if(!flag)
+								System.out.println("Only valid date allowed");
+							else
+								break;
+							customer.setDOB(dob);
+						}
+						while(true) {
+							System.out.println("Enter Customer PAN(for eg: abcde1234e)");
+							String pan=scr.next();
+							boolean flag = Utilities.panValidate(pan);
+							if(!flag)
+								System.out.println("Wrong Pan Detail");
+							else
+								break;
+							customer.setPAN(pan);
+							
+						}
+						
+						System.out.println("Enter Customer Gender");
+						String gender=scr.next();
+						System.out.println("Enter Customer Address line 1");
+						String addressline1=scr.next();
+						System.out.println("Enter Customer Address line 2");
+						String addressline2=scr.next();
+						System.out.println("Enter City");
+						String city=scr.next();
+						System.out.println("Enter State");
+						String state=scr.next();
+						System.out.println("Enter ZipCode");
+						String zipcode=scr.next();
 					while (true) {
 						System.out.println("Enter Account No");
 						String accNo = scr.next();
@@ -104,12 +104,12 @@ public class BankDemo {
 					System.out.println("Enter Customer Balance");
 					String balance = scr.next();
 
-//						customer.setGender(gender);
-//						address.setAddressline1(addressline1);
-//						address.setAddressline2(addressline2);
-//						address.setCity(city);
-//						address.setState(state);
-//						address.setZipcode(zipcode);
+						customer.setGender(gender);
+						address.setAddressline1(addressline1);
+						address.setAddressline2(addressline2);
+						address.setCity(city);
+						address.setState(state);
+						address.setZipcode(zipcode);
 
 					account.setBalance(Integer.parseInt(balance));
 					account.setCustomer(customer);
