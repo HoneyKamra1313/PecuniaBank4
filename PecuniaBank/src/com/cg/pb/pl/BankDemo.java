@@ -36,46 +36,59 @@ public class BankDemo {
 				int opt1 = scr.nextInt();
 				switch (opt1) {
 				case 1:
+						String name,accNo,contact,aadhar,dob,pan;
 						while(true) {
 							System.out.println("Enter Customer Name");
-							String name=scr.next();
+							name=scr.next();
 							boolean flag = Utilities.nameValidate(name);
 							if(!flag)
 								System.out.println("Only 3-10 digit alphabet allowed");
 							else
 								break;
-							customer.setName(name);
+							
+						}
+						while(true) {
+							System.out.println("Enter Customer Contact");
+							contact=scr.next();
+							boolean flag = Utilities.contactValidate(contact);
+							
+							if(!flag)
+								System.out.println("Only 10 digit number allowed");
+							else
+								break;
+							
+							
 						}
 						while(true) {
 							System.out.println("Enter Customer Aadhar");
-							String aadhar=scr.next();
+							aadhar=scr.next();
 							boolean flag = Utilities.aadharValidate(aadhar);
 							if(!flag)
 								System.out.println("Only 12 digit number allowed");
 							else
 								break;
-							customer.setAadhar(Double.parseDouble(aadhar));
+							
 							
 						}
 						while(true) {
 							System.out.println("Enter Customer DOB(DD/MM/YYYY)");
-							String dob=scr.next();
+							dob=scr.next();
 							boolean flag = Utilities.dateValidate(dob);
 							if(!flag)
 								System.out.println("Only valid date allowed");
 							else
 								break;
-							customer.setDOB(dob);
+							
 						}
 						while(true) {
 							System.out.println("Enter Customer PAN(for eg: abcde1234e)");
-							String pan=scr.next();
+							pan=scr.next();
 							boolean flag = Utilities.panValidate(pan);
 							if(!flag)
 								System.out.println("Wrong Pan Detail");
 							else
 								break;
-							customer.setPAN(pan);
+							
 							
 						}
 						
@@ -91,16 +104,25 @@ public class BankDemo {
 						String state=scr.next();
 						System.out.println("Enter ZipCode");
 						String zipcode=scr.next();
-					while (true) {
+					while(true) {
 						System.out.println("Enter Account No");
-						String accNo = scr.next();
+						accNo = scr.next();
 						boolean flag = Utilities.accNoValidate(accNo);
-						if (!flag)
+						if(!flag)
 							System.out.println("Only 12 digit number allowed");
 						else
 							break;
-						account.setAccNo(Double.parseDouble(accNo));
+						
+						
 					}
+					customer.setName(name);
+					customer.setAadhar(Long.parseLong(aadhar));
+					customer.setContact(Long.parseLong(contact));
+					customer.setDOB(dob);
+					customer.setPAN(pan);
+					
+					account.setAccNo(Long.parseLong(accNo));
+					
 					System.out.println("Enter Customer Balance");
 					String balance = scr.next();
 
@@ -110,7 +132,8 @@ public class BankDemo {
 						address.setCity(city);
 						address.setState(state);
 						address.setZipcode(zipcode);
-
+					
+					customer.setAddress(address);
 					account.setBalance(Integer.parseInt(balance));
 					account.setCustomer(customer);
 					account.setAddress(address);
@@ -118,13 +141,13 @@ public class BankDemo {
 					break;
 				case 2:
 					System.out.println("Enter Account Number");
-					double accNo1 = scr.nextDouble();
+					long accNo1 = scr.nextLong();
 					asi.getAccount(accNo1);
 					break;
 				case 3:
 					System.out.println("Enter Account Number You want to make change:");
 					String updAccNo = scr.next();
-					account.setAccNo(Double.parseDouble(updAccNo));
+					account.setAccNo(Long.parseLong(updAccNo));
 					System.out.println(
 							"Choose the following you want to change:\n" + "1. Name\n" + "2. Contact\n" + "3. Address");
 					int opt3 = scr.nextInt();
@@ -138,7 +161,7 @@ public class BankDemo {
 					case 2:
 						System.out.println("Enter Contact:");
 						String contact1 = scr.next();
-						customer.setContact(Double.parseDouble(contact1));
+						customer.setContact(Long.parseLong(contact1));
 						csi.updateCustomerContact(account, customer);
 						break;
 					case 3:
@@ -245,7 +268,12 @@ public class BankDemo {
 				int startDate=scr.nextInt();
 				System.out.println("Enter End Date");
 				int endDate=scr.nextInt();
-				psi.accountSummary(accNo, startDate, endDate);
+//				psi.accountSummary(accNo, startDate, endDate);
+				break;
+			case 4:
+				
+			default:
+				System.out.println("Choose Again");
 
 			}
 		}

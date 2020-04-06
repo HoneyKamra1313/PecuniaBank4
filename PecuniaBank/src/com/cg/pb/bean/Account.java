@@ -7,7 +7,7 @@ public class Account {
 	private double balance;
 	private Customer customer;
 	private Address address;
-	private Double accNo;
+	private long accNo;
 	
 	public String getAccId() {
 		return accId;
@@ -45,10 +45,10 @@ public class Account {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public Double getAccNo() {
+	public long getAccNo() {
 		return accNo;
 	}
-	public void setAccNo(Double accNo) {
+	public void setAccNo(long accNo) {
 		this.accNo = accNo;
 	}
 	@Override

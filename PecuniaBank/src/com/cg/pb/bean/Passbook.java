@@ -22,7 +22,11 @@ public class Passbook {
 	public void setEndDate(int endDate) {
 		this.endDate = endDate;
 	}
+	public String getPassBook() {
+		return "PassBook Printed";	
+	}
+}
 	
 	
 
-}
+

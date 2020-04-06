@@ -2,8 +2,8 @@ package com.cg.pb.bean;
 
 public class Customer {
 	private String name; 
-	public double contact;
-	private double aadhar;
+	public long contact;
+	private long aadhar;
 	private String DOB;
 	private String PAN;
 	private String gender;
@@ -15,16 +15,16 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getContact() {
+	public long getContact() {
 		return contact;
 	}
-	public void setContact(double contact) {
+	public void setContact(long contact) {
 		this.contact = contact;
 	}
-	public double getAadhar() {
+	public long getAadhar() {
 		return aadhar;
 	}
-	public void setAadhar(double aadhar) {
+	public void setAadhar(long aadhar) {
 		this.aadhar = aadhar;
 	}
 	public String getDOB() {

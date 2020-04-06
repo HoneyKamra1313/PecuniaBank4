@@ -6,7 +6,7 @@ import com.cg.pb.bean.*;
 public interface AccountService {
 	
 	public void addAccount(Account account,Customer customer,Address address);
-	public void getAccount(double accNo);
+	public void getAccount(long accNo);
 	public String deleteAccount(int accNo);
 
 }

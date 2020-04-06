@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class test1 {
 	String testName;
@@ -12,6 +13,9 @@ public class test1 {
 
 	public static void main(String[] args) {
 		test1 t1=new test1("Akash","22");
+		ArrayList al= new ArrayList();
+		
+		for(int i=0;i<)
 
 	}
 

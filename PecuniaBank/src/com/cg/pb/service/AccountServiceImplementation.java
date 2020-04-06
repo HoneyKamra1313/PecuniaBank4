@@ -19,9 +19,9 @@ public class AccountServiceImplementation implements AccountService{
 		csi.addCustomerDetails(customer, address);
 	}
 	@Override 
-	public void getAccount(double accNo1) {
+	public void getAccount(long accNo1) {
 		
-		alacc.stream().filter(c->c.getAccNo()==accNo1).forEach(System.out::println);		
+		alacc.stream().filter(c->c.getAccNo()==accNo1).forEach(System.out::println);
 	
 	}
 	@Override
