@@ -1,19 +1,21 @@
 package com.cg.pb.bean;
 
+import java.time.LocalDate;
+
 public class Transaction {
-	private double accNo;
 	private double amount;
-	public double getAccNo() {
-		return accNo;
-	}
-	public void setAccNo(double accNo) {
-		this.accNo = accNo;
-	}
+	private LocalDate date;
 	public double getAmount() {
 		return amount;
 	}
 	public void setAmount(double amount) {
 		this.amount = amount;
+	}
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
 	}
 
 }

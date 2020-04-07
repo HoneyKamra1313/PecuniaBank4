@@ -5,8 +5,8 @@ import com.cg.pb.bean.*;
 
 public interface AccountService {
 	
-	public void addAccount(Account account,Customer customer,Address address);
-	public void getAccount(long accNo);
-	public String deleteAccount(int accNo);
+	void addAccount(Account account,Customer customer,Address address) throws Exception;
+	void fetchAccount(long accNo);
+	void deleteAccount(long accNo);
 
 }

@@ -1,5 +1,7 @@
-package com.cg.pb.pl;
+package com.cg.pb.ui;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,10 +10,10 @@ import com.cg.pb.bean.Address;
 import com.cg.pb.bean.Customer;
 import com.cg.pb.bean.Passbook;
 import com.cg.pb.bean.Transaction;
-import com.cg.pb.service.AccountServiceImplementation;
-import com.cg.pb.service.CustomerServiceImplementation;
+import com.cg.pb.service.AccountServiceImpl;
+import com.cg.pb.service.CustomerServiceImpl;
 import com.cg.pb.service.PassbookServiceImplementation;
-import com.cg.pb.service.TransactionServiceImplementation;
+import com.cg.pb.service.TransactionServiceImpl;
 import com.cg.pb.utilities.Utilities;
 
 public class BankDemo {
@@ -19,9 +21,9 @@ public class BankDemo {
 	public static void main(String[] args) {
 		Scanner scr = new Scanner(System.in);
 
-		AccountServiceImplementation asi = new AccountServiceImplementation();
-		CustomerServiceImplementation csi = new CustomerServiceImplementation();
-		TransactionServiceImplementation tsi = new TransactionServiceImplementation();
+		AccountServiceImpl asi = new AccountServiceImpl();
+		CustomerServiceImpl csi = new CustomerServiceImpl();
+		TransactionServiceImpl tsi = new TransactionServiceImpl();
 		PassbookServiceImplementation psi = new PassbookServiceImplementation();
 		while (true) {
 			Customer customer = new Customer();
@@ -47,63 +49,63 @@ public class BankDemo {
 								break;
 							
 						}
-						while(true) {
-							System.out.println("Enter Customer Contact");
-							contact=scr.next();
-							boolean flag = Utilities.contactValidate(contact);
-							
-							if(!flag)
-								System.out.println("Only 10 digit number allowed");
-							else
-								break;
-							
-							
-						}
-						while(true) {
-							System.out.println("Enter Customer Aadhar");
-							aadhar=scr.next();
-							boolean flag = Utilities.aadharValidate(aadhar);
-							if(!flag)
-								System.out.println("Only 12 digit number allowed");
-							else
-								break;
-							
-							
-						}
-						while(true) {
-							System.out.println("Enter Customer DOB(DD/MM/YYYY)");
-							dob=scr.next();
-							boolean flag = Utilities.dateValidate(dob);
-							if(!flag)
-								System.out.println("Only valid date allowed");
-							else
-								break;
-							
-						}
-						while(true) {
-							System.out.println("Enter Customer PAN(for eg: abcde1234e)");
-							pan=scr.next();
-							boolean flag = Utilities.panValidate(pan);
-							if(!flag)
-								System.out.println("Wrong Pan Detail");
-							else
-								break;
-							
-							
-						}
-						
-						System.out.println("Enter Customer Gender");
-						String gender=scr.next();
-						System.out.println("Enter Customer Address line 1");
-						String addressline1=scr.next();
-						System.out.println("Enter Customer Address line 2");
-						String addressline2=scr.next();
-						System.out.println("Enter City");
-						String city=scr.next();
-						System.out.println("Enter State");
-						String state=scr.next();
-						System.out.println("Enter ZipCode");
-						String zipcode=scr.next();
+//						while(true) {
+//							System.out.println("Enter Customer Contact");
+//							contact=scr.next();
+//							boolean flag = Utilities.contactValidate(contact);
+//							
+//							if(!flag)
+//								System.out.println("Only 10 digit number allowed");
+//							else
+//								break;
+//							
+//							
+//						}
+//						while(true) {
+//							System.out.println("Enter Customer Aadhar");
+//							aadhar=scr.next();
+//							boolean flag = Utilities.aadharValidate(aadhar);
+//							if(!flag)
+//								System.out.println("Only 12 digit number allowed");
+//							else
+//								break;
+//							
+//							
+//						}
+//						while(true) {
+//							System.out.println("Enter Customer DOB(DD/MM/YYYY)");
+//							dob=scr.next();
+//							boolean flag = Utilities.dateValidate(dob);
+//							if(!flag)
+//								System.out.println("Only valid date allowed");
+//							else
+//								break;
+//							
+//						}
+//						while(true) {
+//							System.out.println("Enter Customer PAN(for eg: abcde1234e)");
+//							pan=scr.next();
+//							boolean flag = Utilities.panValidate(pan);
+//							if(!flag)
+//								System.out.println("Wrong Pan Detail");
+//							else
+//								break;
+//							
+//							
+//						}
+//						
+//						System.out.println("Enter Customer Gender");
+//						String gender=scr.next();
+//						System.out.println("Enter Customer Address line 1");
+//						String addressline1=scr.next();
+//						System.out.println("Enter Customer Address line 2");
+//						String addressline2=scr.next();
+//						System.out.println("Enter City");
+//						String city=scr.next();
+//						System.out.println("Enter State");
+//						String state=scr.next();
+//						System.out.println("Enter ZipCode");
+//						String zipcode=scr.next();
 					while(true) {
 						System.out.println("Enter Account No");
 						accNo = scr.next();
@@ -116,33 +118,39 @@ public class BankDemo {
 						
 					}
 					customer.setName(name);
-					customer.setAadhar(Long.parseLong(aadhar));
-					customer.setContact(Long.parseLong(contact));
-					customer.setDOB(dob);
-					customer.setPAN(pan);
+//					customer.setAadhar(Long.parseLong(aadhar));
+//					customer.setContact(Long.parseLong(contact));
+//					customer.setDOB(dob);
+//					customer.setPAN(pan);
 					
 					account.setAccNo(Long.parseLong(accNo));
 					
 					System.out.println("Enter Customer Balance");
 					String balance = scr.next();
 
-						customer.setGender(gender);
-						address.setAddressline1(addressline1);
-						address.setAddressline2(addressline2);
-						address.setCity(city);
-						address.setState(state);
-						address.setZipcode(zipcode);
+//						customer.setGender(gender);
+//						address.setAddressline1(addressline1);
+//						address.setAddressline2(addressline2);
+//						address.setCity(city);
+//						address.setState(state);
+//						address.setZipcode(zipcode);
 					
 					customer.setAddress(address);
 					account.setBalance(Integer.parseInt(balance));
 					account.setCustomer(customer);
 					account.setAddress(address);
-					asi.addAccount(account, customer, address);
+					try {
+						asi.addAccount(account, customer, address);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					System.out.println("Customer Account added successfully!!");
 					break;
 				case 2:
 					System.out.println("Enter Account Number");
 					long accNo1 = scr.nextLong();
-					asi.getAccount(accNo1);
+					asi.fetchAccount(accNo1);
 					break;
 				case 3:
 					System.out.println("Enter Account Number You want to make change:");
@@ -156,7 +164,7 @@ public class BankDemo {
 						System.out.println("Enter Name:");
 						String name1 = scr.next();
 						customer.setName(name1);
-						csi.updateCustomerName(account, customer);
+//						csi.updateCustomerName(account, customer);
 						break;
 					case 2:
 						System.out.println("Enter Contact:");
@@ -190,8 +198,8 @@ public class BankDemo {
 
 				case 4:
 					System.out.println("Enter Account Number");
-					int delAccNo = scr.nextInt();
-					System.out.println(asi.deleteAccount(delAccNo));
+					long delAccNo = scr.nextLong();
+					asi.deleteAccount(delAccNo);
 					break;
 				}
 				break;
@@ -202,13 +210,19 @@ public class BankDemo {
 				int opt2 = scr.nextInt();
 				switch (opt2) {
 				case 1:
+					Transaction transaction = new Transaction();
+					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+					LocalDate date = LocalDate.now();
 
 					System.out.println("enter account number..");
-					Double actNo = scr.nextDouble();
+					long accNo = scr.nextLong();
 					System.out.println("enter amount you want to deposite");
 					int amount = scr.nextInt();
 
-					tsi.creditUsingSlip(account.getBalance());
+					transaction.setDate(date);
+					transaction.setAmount(amount);
+					tsi.addTransaction(accNo, transaction);
+					tsi.creditUsingSlip(accNo,amount);
 					break;
 				case 2:
 					System.out.println("enter account number..");

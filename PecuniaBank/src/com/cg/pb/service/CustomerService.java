@@ -1,11 +1,13 @@
 package com.cg.pb.service;
 
+
 import com.cg.pb.bean.*;
 
 public interface CustomerService {
-	public void addCustomerDetails(Customer customer,Address address);
-	public boolean updateCustomerName(Account account,Customer customer);
-	public boolean updateCustomerContact(Account account,Customer customer);
-	public boolean updateCustomerAddress(Account account,Address address);
-
+	void addCustomerDetails(Customer customer,Address address) throws Exception;
+	void updateCustomerName(Account account,Customer customer) throws Exception;
+	void updateCustomerContact(Account account,Customer customer);
+	void updateCustomerAddress(Account account,Address address);
+	void fetchEmployees();
+	void deleteEmployee();
 }
